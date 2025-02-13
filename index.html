@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study MBBS Abroad | University Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Gradient Background */
+      .hero-gradient {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      }
+      .header-gradient {
+        background: linear-gradient(135deg, #171718, #afc3ee);
+      }
+      .section-gradient {
+        background: linear-gradient(135deg, #f0f4ff, #e0e7ff);
+      }
+      .card-gradient {
+        background: linear-gradient(135deg, #ffffff, #f9fafb);
+      }
+      .footer-gradient {
+        background: linear-gradient(135deg, #171718, #afc3ee);
+      }
+
+      /* Custom Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin 10s linear infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      /* Bubbles */
+      .bubble {
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        position: absolute;
+        bottom: -100px;
+        animation: bubble-float 5s infinite;
+      }
+      @keyframes bubble-float {
+        0% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh);
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      // JavaScript for form validation
+      function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const country = document.getElementById("country").value.trim();
+
+        if (!name || !email || !phone || !country) {
+          alert("All fields are required!");
+          return false;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          alert("Please enter a valid email address.");
+          return false;
+        }
+
+        if (!/^\d{10}$/.test(phone)) {
+          alert("Please enter a valid 10-digit phone number.");
+          return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="sticky top-0 header-gradient shadow-md z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <img
+            src="https://placehold.co/40"
+            alt="Logo"
+            class="h-10 w-10 mr-2"
+          />
+          <h1 class="text-2xl font-bold text-white">University Insights</h1>
+        </div>
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#why-study"
+                class="text-white hover:text-blue-200 transition duration-300"
+                >Why Study MBBS Abroad?</a
+              >
+            </li>
+            <li>
+              <a
+                href="#top-countries"
+                class="text-white hover:text-blue-200 transition duration-300"
+                >Top Countries</a
+              >
+            </li>
+            <li>
+              <a
+                href="#admission"
+                class="text-white hover:text-blue-200 transition duration-300"
+                >Admission Process</a
+              >
+            </li>
+            <li>
+              <a
+                href="#lead-form"
+                class="text-white hover:text-blue-200 transition duration-300"
+                >Apply Now</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 relative overflow-hidden">
+      <div class="container mx-auto text-center animate-fade-in">
+        <h1 class="text-5xl font-bold mb-4">Apply Now for MBBS Abroad</h1>
+        <p class="text-xl mb-8">
+          Start your journey to becoming a global medical professional.
+        </p>
+        <a
+          href="#lead-form"
+          class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300"
+          >Apply Now</a
+        >
+      </div>
+      <!-- Bubbles -->
+      <div class="bubble" style="left: 10%; animation-delay: 0s"></div>
+      <div class="bubble" style="left: 30%; animation-delay: 2s"></div>
+      <div class="bubble" style="left: 50%; animation-delay: 4s"></div>
+      <div class="bubble" style="left: 70%; animation-delay: 6s"></div>
+      <div class="bubble" style="left: 90%; animation-delay: 8s"></div>
+    </section>
+
+    <!-- Why Study MBBS Abroad Section -->
+    <section
+      id="why-study"
+      class="py-16 section-gradient relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 animate-fade-in">
+          Why Study MBBS Abroad?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-float"
+          >
+            <h3 class="text-xl font-semibold mb-4">Global Recognition</h3>
+            <p>
+              Degrees recognized by WHO, MCI, and other international medical
+              councils.
+            </p>
+          </div>
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-float"
+          >
+            <h3 class="text-xl font-semibold mb-4">Affordable Fees</h3>
+            <p>
+              Low-cost tuition fees compared to private medical colleges in your
+              home country.
+            </p>
+          </div>
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-float"
+          >
+            <h3 class="text-xl font-semibold mb-4">
+              World-Class Infrastructure
+            </h3>
+            <p>State-of-the-art facilities and experienced faculty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Countries Section -->
+    <section
+      id="top-countries"
+      class="py-16 bg-gradient-to-r from-blue-50 to-purple-50 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 animate-fade-in">
+          Top Countries to Study MBBS
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:scale-105 transition-transform animate-spin-slow"
+          >
+            <h3 class="text-xl font-semibold mb-4">Russia</h3>
+            <p>Renowned universities with affordable fees.</p>
+          </div>
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:scale-105 transition-transform animate-spin-slow"
+          >
+            <h3 class="text-xl font-semibold mb-4">Uzbekistan</h3>
+            <p>High-quality education with low living costs.</p>
+          </div>
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:scale-105 transition-transform animate-spin-slow"
+          >
+            <h3 class="text-xl font-semibold mb-4">Kazakhstan</h3>
+            <p>English-medium programs with global recognition.</p>
+          </div>
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:scale-105 transition-transform animate-spin-slow"
+          >
+            <h3 class="text-xl font-semibold mb-4">Philippines</h3>
+            <p>US-based curriculum and English-speaking environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admission Process & Eligibility Section -->
+    <section
+      id="admission"
+      class="py-16 bg-gradient-to-r from-purple-50 to-blue-50 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 animate-fade-in">
+          Admission Process & Eligibility
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-float"
+          >
+            <h3 class="text-xl font-semibold mb-4">Eligibility</h3>
+            <ul class="list-disc list-inside">
+              <li>Minimum 50% in 12th grade (PCB).</li>
+              <li>NEET qualification (for Indian students).</li>
+              <li>Valid passport.</li>
+            </ul>
+          </div>
+          <div
+            class="card-gradient p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-float"
+          >
+            <h3 class="text-xl font-semibold mb-4">Admission Process</h3>
+            <ul class="list-disc list-inside">
+              <li>Submit application form.</li>
+              <li>Receive admission letter.</li>
+              <li>Apply for student visa.</li>
+              <li>Travel and join the program.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Form Section -->
+    <section id="lead-form" class="hero-gradient text-white py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 animate-fade-in">
+          Apply Now
+        </h2>
+        <form
+          onsubmit="return validateForm()"
+          class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md text-gray-800 animate-scale-up"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-semibold mb-2"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-semibold mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="phone" class="block text-sm font-semibold mb-2"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="country" class="block text-sm font-semibold mb-2"
+              >Preferred Country</label
+            >
+            <select
+              id="country"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              <option value="">Select Country</option>
+              <option value="Russia">Russia</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Egypt">Egypt</option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-8">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 University Insights. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
